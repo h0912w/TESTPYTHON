@@ -5,6 +5,7 @@ import re
 import time
 import random
 
+
 def get_search_results(keyword):
     search_url = f"https://www.google.com/search?q={keyword}"
     headers = {
@@ -26,6 +27,7 @@ def get_search_results(keyword):
         print(f"Error occurred for keyword {keyword}: {e}")
     return int(num_results)
 
+
 # 엑셀 파일에서 키워드 목록 불러오기
 input_file = 'keywords.xlsx'
 keywords_df = pd.read_excel(input_file)
@@ -36,16 +38,17 @@ print(f"Loaded keywords: {keywords_df.shape[0]} rows")
 results = []
 for index, row in keywords_df.iterrows():
     keyword = row['Keyword']
-    print(f"Processing keyword {index + 1}/{keywords_df.shape[0]}: {keyword}")
     num_results = get_search_results(keyword)
+    print(f"Processing keyword {index + 1}/{keywords_df.shape[0]}: {keyword} - {num_results} results")
     results.append({
         'Keyword': keyword,
         'Search Results': num_results
     })
 
-# 결과를 데이터프레임으로 변환 및 저장
-results_df = pd.DataFrame(results)
-output_file = 'keyword_search_results.xlsx'
-results_df.to_excel(output_file, index=False)
-
-print(f"검색 결과가 {output_file} 파일에 저장되었습니다.")
+    # Save results for every 500 keywords
+    if (index + 1) % 500 == 0 or (index + 1) == keywords_df.shape[0]:
+        output_file = f'keyword_search_results_{index + 1}.xlsx'
+        results_df = pd.DataFrame(results)
+        results_df.to_excel(output_file, index=False)
+        print(f"검색 결과가 {output_file} 파일에 저장되었습니다.")
+        results = []  # Reset results list
