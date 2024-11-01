@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://manage-searchad.pstatic.net/sofia/20241030150814/favicon.ico" rel="icon"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#000000" name="theme-color"/>
+  <meta content="Naver Search Advertising Advertisers Center" name="description"/>
+  <link href="https://manage-searchad.pstatic.net/sofia/20241030150814/logo192.png" rel="apple-touch-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://manage-searchad.pstatic.net/sofia/20241030150814/manifest.json" rel="manifest"/>
+  <title>
+   ë¤ì´ë² ê²ìê´ê³ : ê´ê³ íë«í¼
+  </title>
+  <script defer="defer" src="https://manage-searchad.pstatic.net/sofia/20241030150814/static/js/main.b0ccaf56.js">
+  </script>
+  <link href="https://manage-searchad.pstatic.net/sofia/20241030150814/static/css/main.9ed09ee8.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <noscript>
+   You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root">
+  </div>
+ </body>
+</html>

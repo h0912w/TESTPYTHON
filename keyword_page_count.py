@@ -11,8 +11,8 @@ file_path = 'search_keywords.xlsx'
 keywords_df = pd.read_excel(file_path)
 
 # 검색할 키워드 범위 설정 (예: 10번째 행부터 100번째 행까지)
-start_row = 10  # 원하는 시작 행 (1번째 행은 0번째 인덱스이므로, 실제 행 번호에 -1을 해줘야 함)
-end_row = 100  # 원하는 종료 행
+start_row = 30001  # 원하는 시작 행 (1번째 행은 0번째 인덱스이므로, 실제 행 번호에 -1을 해줘야 함)
+end_row = 50000  # 원하는 종료 행
 keywords = keywords_df.iloc[start_row - 1:end_row, 0]  # 첫 번째 열에서 해당 행 범위의 키워드 추출
 
 # 결과 저장을 위한 엑셀 파일 생성
@@ -40,7 +40,7 @@ for keyword in keywords:
     ws.append([keyword, total_products])
 
 # 결과를 엑셀 파일로 저장
-output_path = 'keyword_search_results.xlsx'
+output_path = 'results_30001_50000.xlsx'
 wb.save(output_path)
 
 print(f"모든 키워드에 대한 검색이 완료되었습니다. 결과는 '{output_path}'에 저장되었습니다.")

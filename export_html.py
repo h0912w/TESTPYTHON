@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 
-url = 'https://search.shopping.naver.com/search/all?query=건총'
+url = 'https://manage.searchad.naver.com/customers/2320771/tool/keyword-planner'
 response = requests.get(url)
 html = response.text
 
